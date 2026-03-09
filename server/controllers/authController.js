@@ -12,7 +12,11 @@ const register = async (req, res,next) => {
   try {
     const { name, email,institution,department, phone, userType,adminKey, password, cpassword } = req.body;
   // console.log(process.env.ADMIN_KEY);
-  const hodExist = await User.findOne({ department , userType: "hod" });
+let hodExist = null;
+
+if (department && department !== "") {
+  hodExist = await User.findOne({ department, userType: "hod" });
+}
 
     if (userType === "admin") {
 

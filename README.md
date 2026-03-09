@@ -1,95 +1,278 @@
-# Book It
+# 🏛 Conference Hall Booking System (MERN Stack)
 
-Book It is an online platform for booking halls for various events. This app allows users to view a list of available halls, book a hall for a specific date and time, and submit their booking requests for approval. Admin users can manage hall listings, approve or reject booking requests, and view booking details.
-<!---
-## Screenshot
-<img  height="350" src="screenshots/BookIt (1).png"  />
-<img  height="350" src="screenshots/BookIt (2).png"  />
-<img  height="350" src="screenshots/BookIt (3).png"  />
-<img  height="350" src="screenshots/BookIt (4).png"  />
-<img  height="350" src="screenshots/BookIt (5).png"  />
-<img  height="350" src="screenshots/BookIt (6).png"  />
-<img  height="350" src="screenshots/BookIt (7).png"  />
--->
+A full-stack **Conference Hall Booking System** built using the **MERN Stack (MongoDB, Express.js, React.js, Node.js)**.
 
-## Features
+This application allows users to browse conference halls, check availability, and book halls for meetings, seminars, and events. Admins can manage halls and bookings.
 
-- Search and filter available halls by location, capacity
-- Book a hall for a specific date and time
-- Submit booking requests to admin for approval
-- Admin dashboard for managing hall listings and booking requests
-- real-time availability updates using a calendar feature
+---
 
-## Technologies Used
+# 🚀 Features
 
-- React: A popular JavaScript library for building user interfaces
-- Node.js: A server-side JavaScript runtime environment
-- Express: A web application framework for Node.js
-- MongoDB: A NoSQL database for storing data
-- Mongoose: An Object Data Modeling (ODM) library for MongoDB
-- Axios: A promise-based HTTP client for making API requests
-- react-router-dom: A routing library for handling navigation in a React app
-- Tailwind CSS: A utility-first CSS framework for styling the app
+### 👤 User Features
 
-## Usage
+* User Registration
+* User Login / Logout
+* View Conference Halls
+* Book Hall with Date & Time Slot
+* View Booking History
 
-### Users
-- Search for available halls by entering the location and date of the event.
-- View the list of available halls and their details, including hall name, location, capacity.
-- Book a hall by selecting the desired hall and filling out the booking form.
-- View the status of their booking request and receive notifications when the request is approved or rejected.
-- View real-time availability updates using a calendar feature.
-### Admin
-- Approve or reject booking requests from users by logging in to the admin dashboard.
-- View the list of pending booking requests and their details, including the user's name, email, and booking details.
-- Create new halls by entering the hall name, location, capacity.
+### 🏢 Admin Features
 
+* Add Conference Halls
+* Manage Hall Details
+* View All Bookings
+* Manage Users
 
+### ⚙ System Features
 
-## Environment Variables
+* JWT Authentication
+* REST API
+* MERN Full Stack Architecture
+* MongoDB Database
+* Responsive React UI
 
-### Client
+---
 
+# 🛠 Tech Stack
 
-| Variable Name | Example |Description |
-|-------------------------------|:----------------:|:----------------------------------------------------------------------|
-| `REACT_APP_ADMIN_SIGN_UP`| `true`| To Enable Admin Sign Up `true` for `On` and `false` for `Off`|
-| `REACT_APP_HOD_FEATURE`| `false` | To Enable HOD Feature `true` for `On` and `false` for `Off` |
-| `REACT_APP_SERVER_URL`                  | `https://bookit********.com`             | Enter Server Url for API request                                     |
-| `REACT_APP_MASTER_ADMIN_EMAIL` | `master**min@gmail.com`       | Email of the Admin who has access to edit and delete all halls |
+### Frontend
 
-### Server
+* React.js
+* Axios
+* React Router
+* CSS
 
-| Variable Name                       | Example | Description                                                               |
-|-------------------------------|:----------------:|:----------------------------------------------------------------------|
-|`DATABASE`|`mongodb+srv://******:*******@********.*******.mongodb.net/*****?retryWrites=true&w=majority`|Enter MongoDB connection Url |
-|`PORT`|`9002`|Server PORT|
-|`SECRET_KEY`|`<Secret Key>`|MongoDB Key|
-|`ADMIN_KEY`|`<Admin Key>`|Any word that is required whtn signup as Admin|
-|`ADMIN_EMAIL`|`ad**n@gmail.com`|Email of Admin|
-|`SENDER_EMAIL`|`ad**n@gmail.com`|Email from which verificaion and forgot link will be sent|
-|`SENDER_PASSWORD`|`******`|Password of Email from which verificaion and forgot link will be sent|
-|`CLIENT_URL`|`https://bookit********.com`|	Enter Client Url for API request|
-|`REACT_APP_HOD_FEATURE`|`false`|To Enable HOD Feature `true` for `On` and `false` for|
-| `REACT_APP_MASTER_ADMIN_EMAIL` | `master**min@gmail.com`       | Email of the Admin who has access to edit and delete all halls |
+### Backend
 
-## Contributing
+* Node.js
+* Express.js
+* JWT Authentication
+* Cookie Parser
+* CORS
 
-Contributions are welcome! If you would like to contribute to this project, please follow these steps:
+### Database
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and commit them.
-4. Push your changes to your forked repository.
-5. Submit a pull request with a detailed description of your changes.
+* MongoDB
+* Mongoose
 
-## Star History
+---
 
-[![Star History Chart](https://api.star-history.com/svg?repos=siddharth9300/BookIt&type=Date)](https://www.star-history.com/#siddharth9300/BookIt&Date)
+# 📂 Project Structure
 
-## Authors
+```
+BookIt
+│
+├── client
+│   ├── public
+│   ├── src
+│   ├── .env
+│   └── package.json
+│
+├── server
+│   ├── DB
+│   ├── model
+│   ├── router
+│   ├── .env
+│   └── app.js
+│
+└── README.md
+```
 
-- [@siddharth9300](https://www.github.com/siddharth9300)
+---
 
-## License
-[GNU GENERAL PUBLIC LICENSE](LICENSE)
+# ⚙ Installation & Setup
+
+## 1️⃣ Clone the Repository
+
+```
+git clone https://github.com/your-username/bookit.git
+```
+
+```
+cd bookit
+```
+
+---
+
+# 📦 Backend Setup
+
+Navigate to the **server folder**
+
+```
+cd server
+```
+
+Install dependencies
+
+```
+npm install
+```
+
+Create `.env` file inside **server folder**
+
+```
+server/.env
+```
+
+Example configuration
+
+```
+PORT=9002
+MONGO_URI=mongodb://127.0.0.1:27017/bookit
+JWT_SECRET=secret123
+```
+
+Start backend server
+
+```
+npm start
+```
+
+Backend will run on
+
+```
+http://localhost:9002
+```
+
+---
+
+# 💻 Frontend Setup
+
+Open a **new terminal**
+
+Navigate to client folder
+
+```
+cd client
+```
+
+Install dependencies
+
+```
+npm install
+```
+
+Create `.env` file inside **client folder**
+
+```
+client/.env
+```
+
+Example configuration
+
+```
+REACT_APP_API_URL=http://localhost:9002
+```
+
+This connects the frontend to the backend API.
+
+Start the frontend
+
+```
+npm start
+```
+
+Frontend will run on
+
+```
+http://localhost:3000
+```
+
+---
+
+# 🗄 Database Setup
+
+Install MongoDB Community Edition
+
+Download:
+
+https://www.mongodb.com/try/download/community
+
+Start MongoDB server
+
+```
+mongod
+```
+
+Connect using MongoDB Compass
+
+```
+mongodb://127.0.0.1:27017
+```
+
+Database will automatically be created when the application runs.
+
+---
+
+# 🔑 API Endpoints
+
+### Authentication
+
+```
+POST /signup
+POST /signin
+POST /logout
+```
+
+### Halls
+
+```
+GET /halls
+POST /addHall
+DELETE /deleteHall
+```
+
+### Bookings
+
+```
+POST /bookHall
+GET /myBookings
+DELETE /cancelBooking
+```
+
+---
+
+# 📸 Application Workflow
+
+1️⃣ User creates account
+2️⃣ User logs in
+3️⃣ User views conference halls
+4️⃣ User selects date and time slot
+5️⃣ User confirms booking
+6️⃣ Booking stored in MongoDB
+
+---
+
+# 🔒 Security
+
+* JWT Authentication
+* Protected Routes
+* Secure Password Storage
+* CORS Enabled
+
+---
+
+# 📌 Future Improvements
+
+* Online Payment Integration
+* Email Notifications
+* Real-time Booking Calendar
+* Admin Analytics Dashboard
+
+---
+
+# 👨‍💻 Author
+
+**Amogh Venkatraman Bhat**
+
+GitHub
+https://github.com/Amoghbhat119
+
+LinkedIn
+https://www.linkedin.com/in/amogh-bhat-509761343
+
+---
+
+# ⭐ Support
+
+If you like this project, please give it a ⭐ on GitHub.

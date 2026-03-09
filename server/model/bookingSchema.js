@@ -53,12 +53,7 @@ const bookingSchema = new mongoose.Schema(
       ref: 'Hall',
       required: true
     },
-    bookedHall: {
-      // type: mongoose.Schema.Types.Subdocument,
-
-      type: Object,
-      required: true,
-    },
+   
 
     bookedHallName: {
       type: String,

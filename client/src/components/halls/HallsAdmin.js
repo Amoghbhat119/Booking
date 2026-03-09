@@ -32,8 +32,8 @@ const HallsAdmin = () => {
       if (response.status !== 200) {
         throw new Error(response.error);
       }
-    } catch (error) {
-      if (error.response.status === 401) {
+    }catch (error) {
+  if (error.response && error.response.status === 401) {
         toast.warn("Unauthrized Access! Please Login!", {
           toastId: 'Unauthrized'
       })

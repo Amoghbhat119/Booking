@@ -55,7 +55,7 @@ const BookingForm = () => {
       const data = response.data;
       //consolelog(data);
 
-      let status;
+      let status = "Request Sent";
       // if(data.userType === "admin"){
       //   status = "Approved By Admin"
       // }else if (data.userType === "hod"){
