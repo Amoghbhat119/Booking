@@ -85,7 +85,7 @@ BookIt
 ## 1️⃣ Clone the Repository
 
 ```
-git clone https://github.com/your-username/bookit.git
+git clone https://github.com/Amoghbhat119/Booking.git
 ```
 
 ```
@@ -117,9 +117,15 @@ server/.env
 Example configuration
 
 ```
+
 PORT=9002
-MONGO_URI=mongodb://127.0.0.1:27017/bookit
-JWT_SECRET=secret123
+DATABASE=
+SECRET_KEY=
+ADMIN_KEY=
+ADMIN_EMAIL=
+SENDER_EMAIL=
+SENDER_PASSWORD=
+CLIENT_URL=http://localhost:3000
 ```
 
 Start backend server
@@ -161,7 +167,8 @@ client/.env
 Example configuration
 
 ```
-REACT_APP_API_URL=http://localhost:9002
+REACT_APP_ADMIN_SIGN_UP=true
+REACT_APP_SERVER_URL=http://localhost:9002
 ```
 
 This connects the frontend to the backend API.
@@ -203,6 +210,25 @@ mongodb://127.0.0.1:27017
 Database will automatically be created when the application runs.
 
 ---
+📧 Email Domain Constraint
+
+The system restricts user registration to official Acropolis Institute email addresses only.
+
+Allowed Email Domains
+
+Users must register using one of the following domains:
+
+@acropolis.in
+
+@acropolis.edu.in
+
+Valid Examples
+john.doe@acropolis.in
+faculty@acropolis.edu.in
+Invalid Examples
+john@gmail.com
+user@yahoo.com
+abc@company.com
 
 # 🔑 API Endpoints
 
